@@ -1,0 +1,24 @@
+{
+  "name": "corso-sviluppatore-software/mini-library",
+  "description": "Esame di verifica: testing con PHP (mini library in-memory).",
+  "type": "project",
+  "require": {
+    "php": "^8.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "MiniLibrary\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MiniLibrary\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
+  }
+}
