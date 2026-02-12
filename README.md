@@ -1,4 +1,4 @@
-# Esame di verifica (2 ore) — Testing con PHP (PHPUnit)
+# Testing con PHP (PHPUnit)
 
 ## Contesto
 Questo progetto contiene un piccolo “mini gestionale biblioteca” **in memoria** (niente DB).
@@ -8,15 +8,13 @@ Il software è già funzionante; il tuo compito è scrivere test automatici con 
 Completare la suite di test in modo da coprire **le regole di business principali**.
 
 - Una parte dei test è **già presente** (validazioni base).
-- Una parte dei test è **da scrivere** (in particolare per `LoanService` e `InMemoryLoanRepository`).
+- Una parte dei test è **da scrivere**.
 
 ## Cosa è consentito
-✅ Aggiungere/modificare file in `tests/`
-✅ Aggiungere provider/dataset e usare buone pratiche (Arrange-Act-Assert, nomi chiari, ecc.)
-✅ Aggiungere classi helper **solo nei test** se serve (es. factory test)
+Aggiungere/modificare file in `tests/`
+Aggiungere provider/dataset e usare buone pratiche (Arrange-Act-Assert, nomi chiari, ecc.)
 
-🚫 Non modificare il codice in `src/` (salvo errori di sintassi o compatibilità ambiente).
-L’esame valuta la capacità di testare codice esistente.
+Non modificare il codice in `src/` (salvo errori di sintassi o compatibilità ambiente).
 
 ## Setup rapido
 ```bash
@@ -24,14 +22,20 @@ composer install
 composer test
 ```
 
-## Requisiti di consegna
+## Requisiti
 1. Tutti i test devono passare.
 2. Aggiungere i test mancanti indicati sotto.
 3. Target consigliato: **copertura ragionevole** sulle regole di business (non serve 100%).
 
 ## Compiti (cosa devi testare)
 
-### A) `LoanService` (DA TESTARE)
+### A) `Member`
+File: `src/Domain/Member.php`
+
+Comportamenti:
+1. Accetta email valide, rifiuta email non valide (provare vari tipi di email malformate).
+
+### B) `LoanService`
 File: `src/Service/LoanService.php`
 
 Regole:
@@ -48,14 +52,10 @@ Regole:
 
 > Suggerimento: qui ci sono molte combinazioni interessanti. Non servono decine di test: bastano quelli “giusti”.
 
-### B) `InMemoryLoanRepository` (DA TESTARE)
+### C) `InMemoryLoanRepository`
 File: `src/Repository/InMemoryLoanRepository.php`
 
 Comportamenti:
 1. `save()` memorizza il prestito.
 2. `activeLoanForBook()` ritorna il prestito attivo del libro (o `null`).
 3. `activeLoansForMember()` ritorna solo i prestiti attivi del membro.
-
-### C) Già testato (NON serve aggiungere altro, salvo vuoi)
-- `Book` validazione ISBN
-- `Member` validazione email

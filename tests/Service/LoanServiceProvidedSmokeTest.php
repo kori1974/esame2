@@ -14,7 +14,7 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * Test "smoke" fornito: dimostra setup e un caso positivo minimo.
- * La maggior parte dei casi di LoanService va ancora testata.
+ * La maggior parte dei casi di LoanService va testata dagli esaminandi.
  */
 final class LoanServiceProvidedSmokeTest extends TestCase
 {

@@ -13,6 +13,7 @@ use MiniLibrary\Service\LoanService;
 use PHPUnit\Framework\TestCase;
 
 /**
+ * TODO (ESAME):
  * Completa questa classe con test significativi per LoanService.
  *
  * Suggerimento:

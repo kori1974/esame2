@@ -7,7 +7,7 @@ namespace MiniLibrary\Domain;
 use InvalidArgumentException;
 
 /**
- * Entità libro
+ * Entità libro estremamente semplice.
  * - Non usa DB
  * - Identità data da $id (stringa)
  * - ISBN: qui NON implementiamo lo standard ISBN completo.
